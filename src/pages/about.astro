@@ -1,0 +1,92 @@
+---
+const pageTitle = "О нас";
+
+const identity = {
+  firstName: "Юрий",
+  country: "Краснодара",
+  occupation: "Веб-разработчик",
+  hobbies: ["Рыбалка", "Животные (особенно котики)", "Путешествия"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const skillColor = "navy";
+const fontWeight = "400";
+const textCase = "uppercase";
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+
+    <style define:vars={{ skillColor, fontWeight, textCase }}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/blog/">Блог</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <h1>{pageTitle}</h1>
+      <p>Вот несколько фактов обо мне:</p>
+      <ul>
+        <li>Моё имя {identity.firstName}.</li>
+        <li>
+          Я из {identity.country}. По своей специальности {identity.occupation}.
+        </li>
+        {
+          identity.hobbies.length >= 2 && (
+            <li>
+              У меня есть любимые увлечения: {identity.hobbies[0]} и{" "}
+              {identity.hobbies[1]}
+            </li>
+          )
+        }
+      </ul>
+      <p>Мои навыки:</p>
+      <ul>
+        {skills.map((skill) => <li class="skill">{skill}</li>)}
+      </ul>
+
+      {happy && <p>I am happy to be learning Astro!</p>}
+
+      {finished && <p>I finished this tutorial!</p>}
+
+      {
+        goal === 3 ? (
+          <p>My goal is to finish in 3 days.</p>
+        ) : (
+          <p>My goal is not 3 days.</p>
+        )
+      }
+    </main>
+
+    <footer>
+      <h2>Подвал сайта</h2>
+    </footer>
+  </body>
+</html>
