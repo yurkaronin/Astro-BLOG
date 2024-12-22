@@ -2,7 +2,8 @@
 const pageTitle = "Главная";
 
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="ru">
@@ -14,11 +15,7 @@ import Navigation from '../components/Navigation.astro';
     <title>{pageTitle}</title>
   </head>
   <body>
-    <header>
-      <div class="wrapper">
-        <Navigation />
-      </div>
-    </header>
+    <Header />
 
     <main>
       <h1>{pageTitle}</h1>
@@ -29,8 +26,10 @@ import Navigation from '../components/Navigation.astro';
       <button class="button" type="button">Кнпока</button>
     </main>
 
-    <footer>
-      <h2>Подвал сайта</h2>
-    </footer>
+    <Footer />
+
+    <script>
+       import "../scripts/menu.js";
+    </script>
   </body>
 </html>
