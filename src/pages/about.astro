@@ -1,4 +1,8 @@
 ---
+
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+
 const pageTitle = "О нас";
 
 const identity = {
@@ -17,6 +21,7 @@ const goal = 3;
 const skillColor = "navy";
 const fontWeight = "400";
 const textCase = "uppercase";
+
 ---
 
 <html lang="ru">
@@ -28,10 +33,6 @@ const textCase = "uppercase";
     <title>{pageTitle}</title>
 
     <style define:vars={{ skillColor, fontWeight, textCase }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
       .skill {
         color: var(--skillColor);
         font-weight: var(--fontWeight);
@@ -42,11 +43,7 @@ const textCase = "uppercase";
   <body>
     <header>
       <div class="wrapper">
-        <ul>
-          <li><a href="/">Главная</a></li>
-          <li><a href="/blog/">Блог</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
+        <Navigation />
       </div>
     </header>
 

@@ -1,5 +1,8 @@
 ---
 const pageTitle = "Главная";
+
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
 ---
 
 <html lang="ru">
@@ -13,11 +16,7 @@ const pageTitle = "Главная";
   <body>
     <header>
       <div class="wrapper">
-        <ul>
-          <li><a href="/">Главная</a></li>
-          <li><a href="/blog/">Блог</a></li>
-          <li><a href="/about/">About</a></li>
-        </ul>
+        <Navigation />
       </div>
     </header>
 
