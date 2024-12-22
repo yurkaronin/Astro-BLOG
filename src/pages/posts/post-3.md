@@ -1,11 +1,12 @@
 ---
-title: My Third Blog Post
-author: Astro Learner
-description: "I had some challenges, but asking in the community really helped!"
+layout: ../../layouts/MarkdownPostLayout.astro
+title: Третий пост в моём новом блоге
+author: 'Юрий Ронин'
+description: "У меня были некоторые трудности, но обращение к сообществу действительно помогло!"
 image:
     url: "https://docs.astro.build/assets/rays.webp"
-    alt: "The Astro logo on a dark background with rainbow rays."
+    alt: "Логотип Astro на темном фоне с розовым свечением."
 pubDate: 2022-07-15
 tags: ["astro", "learning in public", "setbacks", "community"]
 ---
-It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
+Не всегда все шло гладко, но мне нравится работать с Astro. И еще, [сообщество Discord](https://astro.build/chat) действительно дружелюбное и готовое помочь!
