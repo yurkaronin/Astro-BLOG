@@ -1,15 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Главная";
+import Greeting from '../components/Greeting';
+const pageTitle = "Главная страница";
 ---
-
 <BaseLayout pageTitle={pageTitle}>
-  <main>
-    <h1>{pageTitle}</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quia
-      aut minima?
-    </p>
-    <button class="button" type="button">Кнпока</button>
-  </main>
+  <h2>Мой потрясающий подзаголовок блога</h2>
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
